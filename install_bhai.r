@@ -9,10 +9,12 @@ install_bhai <- function(pkg){
 }
 
 # usage
-packages <- c("ggplot2","pcaMethods","animation")
+packages <- c("ggplot2","animation")
 install_bhai(packages)
 
 # If pcaMethods shows FALSE then run below 
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
+
+BiocManager::install("pcaMethods")
 
